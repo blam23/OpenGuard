@@ -1,0 +1,36 @@
+{
+  "manifest_version": 2,
+
+  "name": "Web-Advisor",
+  "short_name": "Web-Advisor",
+  "description": "FYP - Web Control Extension to rank and block websites based on community ratings.",
+  "version": "1.2",
+
+  "browser_action": {
+    "default_icon": "png/A.png",
+    "default_popup": "html/popup.html"
+  },
+  "background": {
+    "page": "html/background.html"
+  },
+  "icons": { 
+    "16": "png/fort-16.png",
+    "48": "png/fort-48.png",
+    "128": "png/fort-128.png" 
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://web-advisor.co.uk/*"
+      ],
+      "js": [
+        "js/inject/site-interface.js"
+      ],
+      "run_at": "document_end",
+      "all_frames": false
+    }
+  ],
+  "permissions": [
+    "<all_urls>", "webRequest", "webRequestBlocking", "tabs", "storage"
+  ]
+}

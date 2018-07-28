@@ -1,0 +1,27 @@
+{
+  "name": "og",
+  "version": "1.0.0",
+  "description": "Open Guard Extension",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "^3.4.2",
+    "nyc": "^11.0.3"
+  },
+  "scripts": {
+    "test": "nyc --reporter=html --hook-run-in-context mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/elliotharris/OpenGuard.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/elliotharris/OpenGuard/issues"
+  },
+  "homepage": "https://gitlab.com/elliotharris/OpenGuard#README"
+}
